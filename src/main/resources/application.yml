@@ -1,2 +1,22 @@
 website:
   urls: https://www.reed.co.uk/jobs/
+
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:jobScraper.db
+    initialization-mode: never
+    password: admin
+    user: admin
+  jpa:
+    database-platform: com.job.scrape.SQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+
+scraper:
+  app:
+    jwtCookieName:
+    jwtSecret:
+    jwtExpiration:
+    jwtExpirationMs: 86400000
