@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ScraperService {
 
-    List<Job> getJobs(String website);
+    List<Job> getJobs(String website, List<String> jobSitesToScrape);
 }

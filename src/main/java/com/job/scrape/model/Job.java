@@ -13,24 +13,25 @@ public class Job implements Serializable {
 
     @Id
     @Column(nullable=false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String JobTitle;
 
-    private String PostedBy;
+    //private String PostedBy;
     private String Salary;
     private String time;
     private String location;
     private String remote;
     private String JobDescription;
 
-    public String getPostedBy() {
+   /* public String getPostedBy() {
         return PostedBy;
     }
 
     public void setPostedBy(String postedBy) {
         PostedBy = postedBy;
-    }
+    }*/
 
     public String getSalary() {
         return Salary;

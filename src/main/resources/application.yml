@@ -1,5 +1,5 @@
 website:
-  urls: https://www.reed.co.uk/jobs/
+  urls: https://www.reed.co.uk/jobs/, https://www.indeed.co.uk/jobs/
 
 spring:
   datasource:

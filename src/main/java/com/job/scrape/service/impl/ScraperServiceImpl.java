@@ -22,15 +22,20 @@ public class ScraperServiceImpl implements ScraperService {
     List<String> urls;
 
     @Override
-    public List<Job> getJobs(String keywords) {
+    public List<Job> getJobs(String keywords, List<String> jobSitesToScrape) {
 
         List<Job> jobs = new ArrayList<>();
 
-        for (String url: urls) {
+        for (String url: jobSitesToScrape) {
 
-            if (url.contains("reed")) {
+            if (url.equals("Reed")) {
+                url = urls.get(0);
 
                 extractDataFromReed(jobs, url + keywords);
+            }
+            if(url.equals("Indeed")){
+                url = urls.get(1);
+                extractDataFromReed(jobs,url + keywords);
             }
 
         }
